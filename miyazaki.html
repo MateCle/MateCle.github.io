@@ -3,12 +3,78 @@
 <html>
 <head>
     <meta charset="utf-8" />
+    <link href="Styles/style.css" rel="stylesheet" type="text/css" />
     <title> Hayao Miyazaki </title>
 </head>
+
 <body>
-    <h1> Il maestro Hayao Miyazaki </h1>
-    <p>
-        Hayao Miyazaki (宮崎 駿 Miyazaki Hayao; Tokyo, 5 gennaio 1941) è un regista, sceneggiatore, animatore, fumettista e produttore cinematografico giapponese.
-    </p>
+    <div class="background">
+        <div class="content">
+            <h1> Il maestro Hayao Miyazaki </h1>
+
+            <table>
+                <tr>
+                    <td style="text-align:center">
+                        <img class="reduce" style="border-radius:100%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Hayao_Miyazaki_cropped_1_Hayao_Miyazaki_201211.jpg/800px-Hayao_Miyazaki_cropped_1_Hayao_Miyazaki_201211.jpg" />
+                    </td>
+                    <td>
+                        <p>
+                            Hayao Miyazaki (宮崎 駿 Miyazaki Hayao; Tokyo, 5 gennaio 1941) è un regista, sceneggiatore, animatore, fumettista e produttore cinematografico giapponese.
+                        </p>
+                        <p>
+                            Con una carriera durata cinquant'anni, Miyazaki è col tempo divenuto l'esponente dell'animazione giapponese più conosciuto all'estero. Il suo nome è inoltre intimamente legato a quello dello Studio Ghibli, studio cinematografico d'animazione da lui fondato nel 1985 insieme al collega e mentore Isao Takahata, oggi ritenuto uno dei più importanti del settore.
+                        </p>
+                        <button onclick="quiz()">Quiz!</button>
+                        <p id="risposta"></p>
+                    </td>
+                </tr>
+            </table>
+
+            <table>
+                <tr>
+                    <td>
+                        <p>
+                            La sua fama internazionale è aumentata dopo le vittorie dell'Orso d'oro e del Premio Oscar per La città incantata, primo e finora unico anime ad aggiudicarsi tali premi.
+                        </p>
+                        <p>
+                            La sua lunga attività è stata insignita con il Winsor McCay Award nel 1998, il Leone d'oro al Festival di Venezia del 2005 e con l'Oscar onorario conferitogli dall'Academy nel novembre 2014.
+                        </p>
+                    </td>
+
+                    <td style="text-align:center">
+                        <img src="Figure/oscar.jpg" />
+                    </td>
+                </tr>
+            </table>
+
+            <table class="menu">
+                <tr>
+                    <td>
+                        <a href="index.html"> Lo Studio Ghibli </a>
+                    </td>
+                    <td style="border:groove; border-color:blueviolet">
+                        <a href="miyazaki.html"> Hayao Miyazaki </a>
+                    </td>
+                    <td>
+                        <a href="lacittàincantata.html"> La città incantata </a>
+                    </td>
+                </tr>
+            </table>
+            </div>
+        </div>
+
+            <script type="text/javascript">
+                function quiz() {
+                    let domanda = prompt("Lo sapevi che Ghibli è una parola italiana?\nInfatti è il nome che, durante la Seconda Guerra Mondiale, i piloti italiani in Nord Africa diedero ad un vento caldo del deserto proveniente dal Deserto del Sahara (ora chiamato Scirocco), ma non solo.\nInfatti è il soprannome con cui gli stessi soldati erano soliti chiamare qualcos'altro, che è una grande passione di Miyazaki e il motivo per cui il nome dello studio è tale.\nChe cos'altro aveva come nome Ghibli?", "");
+                    let risposta = domanda.toLocaleLowerCase();
+                    if (risposta == 'aereo' || risposta == 'un aereo' || risposta == 'aereoplano' || risposta == 'un aereoplano' || risposta == 'velivolo' || risposta == 'un velivolo') {
+                        document.getElementById("risposta").innerHTML = "Esatto! “Ghibli” oltre ad essere il nome con cui i piloti italiani in Nord Africa indicarono il vento caldo del deserto proveniente dal Deserto del Sahara (ora chiamato Scirocco), è anche il nome usato per indicare i loro aeroplani da ricognizione.<br> Hayao Miyazaki, che ha da sempre una passione per i vecchi velivoli grazie al lavoro di ingegnere areonautico del padre, ne era a conoscenza, e ha deciso di usare questa parola come nome per il nuovo studio: “Facciamo soffiare un vento caldo nel mondo dell’animazione giapponese!”.<br> Anche se “Ghibli” è una parola italiana, la giusta pronuncia è jee - blee (ji - bu - ri in giapponese).";
+                    } else {
+                        document.getElementById("risposta").innerHTML = "Sbagliato! “Ghibli” oltre ad essere il nome con cui i piloti italiani in Nord Africa indicarono il vento caldo del deserto proveniente dal Deserto del Sahara (ora chiamato Scirocco), è anche il nome usato per indicare i loro aeroplani da ricognizione.<br> Hayao Miyazaki, che ha da sempre una passione per i vecchi velivoli grazie al lavoro di ingegnere areonautico del padre, ne era a conoscenza, e ha deciso di usare questa parola come nome per il nuovo studio: “Facciamo soffiare un vento caldo nel mondo dell’animazione giapponese!”.<br> Anche se “Ghibli” è una parola italiana, la giusta pronuncia è jee - blee (ji - bu - ri in giapponese).";
+                    }
+                }
+            </script>
+
+
 </body>
 </html>

@@ -3,11 +3,75 @@
 <html>
     <head>
         <meta charset="utf-8" />
+        <link href="Styles/style.css" rel="stylesheet" type="text/css" />
         <title> Studio Ghibli </title>
     </head>
+
+
     <body>
-        <h1> Lo Studio Ghibli </h1>
-        <p> Studio Ghibli (株式会社スタジオジブリ Kabushiki-gaisha Sutajio Jiburi) è uno studio cinematografico di film d'animazione 
-        giapponese fondato nel 1985 a Tokyo da <a href="miyazaki.html" Hayao Miyazaki> </a>, Isao Takahata, Toshio Suzuki e Yasuyoshi Tokuma. </p>
+        <div class="background">
+            <div class="content">
+                <h1> Lo Studio Ghibli </h1>
+
+                <table>
+                    <tr>
+                        <td>
+                            <p>
+                                Studio Ghibli (株式会社スタジオジブリ Kabushiki-gaisha Sutajio Jiburi) è uno studio cinematografico di film d'animazione
+                                giapponese fondato nel 1985 a Tokyo da <a href="miyazaki.html"> Hayao Miyazaki, </a> Isao Takahata, Toshio Suzuki e Yasuyoshi Tokuma.
+                            </p>
+                            <button onclick="quiz()">Quiz!</button>
+                            <p id="risposta"></p>
+                        </td>
+                        <td>
+                            <img style="width:300px;height:auto;" src=https://upload.wikimedia.org/wikipedia/it/5/50/GhibliLogo.png />
+                        </td>
+                    </tr>
+                </table>
+
+                <table>
+                    <tr>
+                        <td style="text-align:center">
+                            <a href="lacittàincantata.html"> <img class="link reduce" src="Figure/poster.jpg" /> </a>
+                        </td>
+                        <td>
+                            <p>
+                                I film realizzati sono tra i più visti nella storia del Giappone, e sono stati acclamati sia dalla critica giapponese sia da quella occidentale.
+                            </p>
+                            <p>
+                                Il loro film più famoso è <i>La città incantata</i>, il quale ha vinto l'Oscar al miglior film di animazione nel 2002,  diventando così il primo (e finora l'unico) regista di anime a ricevere tale riconoscimento.
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+
+                <table class="menu">
+                    <tr>
+                        <td style="border: groove; border-color: blueviolet">
+                            <a href="index.html"> Lo Studio Ghibli </a>
+                        </td>
+                        <td>
+                            <a href="miyazaki.html"> Hayao Miyazaki </a>
+                        </td>
+                        <td>
+                            <a href="lacittàincantata.html"> La città incantata </a>
+                        </td>
+                    </tr>
+                </table>
+                </div>
+            </div>
+
+                <script type="text/javascript">
+                    function quiz() {
+                        let domanda = prompt("Qual è il nome del personaggio che compare nel logo dello Studio Ghibli?", "");
+                        let risposta = domanda.toLocaleLowerCase();
+                        if (risposta == 'totoro') {
+                            document.getElementById("risposta").innerHTML = "Esatto! Il personaggio nel logo si chiama Totoro!";
+                        } else {
+                            document.getElementById("risposta").innerHTML = "Sbagliato! Il personaggio nel logo si chiama Totoro!";
+                        }
+                    }
+                </script>
+
     </body>
 </html>
